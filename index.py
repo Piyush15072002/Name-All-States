@@ -60,23 +60,26 @@ while gameOn:
         screen.bye()
         break
 
-    if userGuess in states:
+    # If user already guessed it, then don't check
+    if userGuess not in guessedStates:  # if NOT guessed before
 
-        # Finding the state which user guessed
-        state = file[file.states == userGuess ]
-        stateX = int(state.x)
-        stateY = int(state.y)
+        if userGuess in states: # if guessed state is in the states list
 
-        # Creating a turtle to go to that place and mark it
-        point = t.Turtle()
-        point.shape("circle")
-        point.shapesize(stretch_wid=0.2)
-        point.penup()
-        point.goto(stateX, stateY)
-        point.write(f"{state.states.item()}", font=("Arial", "8" ,"bold"))   # item allows us to get the first data
+            # Finding the state which user guessed
+            state = file[file.states == userGuess ]
+            stateX = int(state.x)
+            stateY = int(state.y)
 
-        # adding the guessed states in list
-        guessedStates.append(state.states.item())
+            # Creating a turtle to go to that place and mark it
+            point = t.Turtle()
+            point.shape("circle")
+            point.shapesize(stretch_wid=0.2)
+            point.penup()
+            point.goto(stateX, stateY)
+            point.write(f"{state.states.item()}", font=("Arial", "8" ,"bold"))   # item allows us to get the first data
+
+            # adding the guessed states in list
+            guessedStates.append(state.states.item())
 
 
 screen.mainloop()
