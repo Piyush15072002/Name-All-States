@@ -1,8 +1,13 @@
-# Name-All-States Game ( राज्यों-के-नाम-बताओ खेल)
+![flag-india_1f1ee-1f1f3](https://user-images.githubusercontent.com/86486393/213445393-890c9637-2720-474f-a52f-024285f859db.png) 
 
-There are 4 project files
+# Name-All-States Game ( राज्यों-के-नाम-बताओ खेल)   
+
+
+There are 4 project files.
+
 
 - `findingCor.py` is used to generate the data for the project. If anyone wants to change image or screen setup, you can use this code to generate your own CSV data and run project.
+
 
 - `IndianStates.csv` **\***  is the generated data from the findingCor.py that is used in project. It has name of states and their coordinates (x, y) for turtle screen.
 
@@ -10,7 +15,9 @@ There are 4 project files
 
 - `map.gif` is the image of Indian Map in **GIF** format because Turtle does not support other popular formats like **JPG, JPEG, PNG**, etc.
 
-**Execute the `index.py` to run your project**
+**Execute the `index.py` to run your project. One important note for users is that - Only name the states, not Union Territories like Delhi, Jammu & Kashmir, etc.**
+
+**As of January 2023, there are 28 states and 8 Union Territories in INDIA**
 
 
 ###### * Special Thanks to `Archana Pant` for her contribution to create the CSV data of Indian states and add coordinates to their corresponding states
